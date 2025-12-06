@@ -1,1 +1,1 @@
-This repository contains everything i did in my years at the Erasmo da Rotterdam Bollate High-School, from the 12th grade till graduation
+A collection of my school exercises, assignments, and practice projects. This repository serves as a central place to document my learning progress, experiment with new concepts, and keep track of coursework subjects in school.
