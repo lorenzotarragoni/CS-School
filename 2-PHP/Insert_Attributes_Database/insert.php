@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost', 'root', '', 'gestione_scuola');
+$conn = new mysqli('localhost', 'root', '', 'gestione_scuola'); // Insert your database credentials
 
 if ($conn->connect_error) {
     die('Connection failed: ' . $conn->connect_error);
