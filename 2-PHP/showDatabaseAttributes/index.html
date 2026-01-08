@@ -6,13 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form method ="post" action="filter.php">
-        <label for ="filter1">Filter the students by:</label>
+    <form method ="POST" action="filter.php">
+        <label for ="filter1">Filter the the surname of the students by:</label>
         <select name="filter1" id="filter1">
-            <option value="ascending">A-Z</option>
-            <option value="descending">Z-A</option>
-            <option value="pass">Passed</option>
-            <option value="fail">Failed</option>
+            <option name="ascending" value="ascending">A-Z</option>
+            <option name="descending" value="descending">Z-A</option>
         </select>
         <button type="submit">Apply Filter</button>
     </form>

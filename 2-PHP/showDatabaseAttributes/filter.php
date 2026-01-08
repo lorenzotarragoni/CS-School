@@ -8,29 +8,31 @@
     }
     
     $filter = $_POST['filter1'];
-    if ( !isset( $filter ) ) {
-        die("Nessun filtro selezionato.");
-    }
 
     switch( $filter ) {
-        case 'ascending':
+        case "ascending":
             $sql = "SELECT nome, cognome FROM studenti ORDER BY nome ASC";
             break;
-        case 'descending':
+        case "descending":
             $sql = "SELECT nome, cognome FROM studenti ORDER BY nome DESC";
-            break;
-        case 'pass':
-            $sql = "SELECT nome, cognome FROM studenti JOIN valutazioni ON valutazioni.id_studente = studenti.matricola WHERE valutazioni.voto >= 6";
-            break;
-        case 'fail':
-            $sql = "SELECT nome, cognome FROM studenti JOIN valutazioni ON valutazioni.id_studente = studenti.matricola WHERE valutazioni.voto < 6";
             break;
         default:
             die("Filtro non valido.");
     }
     $result = $conn->query($sql);
 
-    while( $row = $result->fetch_assoc() ) {
-        echo "Nome: " . $row['nome'] . " - Cognome: " . $row['cognome'] . "<br>";
+    if($result->num_rows > 0) {
+        echo "<table border='1'>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                </tr>";
+    }
+
+    while($row = $result->fetch_assoc()) {
+        echo "<tr>
+                <td>" . $row['nome'] . "</td>
+                <td>" . $row['cognome'] . "</td>
+              </tr>";
     }
 ?>
