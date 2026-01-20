@@ -1,0 +1,37 @@
+<!-- Menu page to navigate to different sections of the project -->
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+
+    <label for="pageSelect">Scegli una pagina:</label>
+
+    <select id="pageSelect">
+        <option value="">-- Seleziona --</option>
+        <option value="Calculator/index.html">Calcolatrice</option>
+        <option value="Insert_Attributes_Database/index.html">Inserisci Attributi</option>
+        <option value="showDatabaseAttributes/index.html">Mostra Attributi</option>
+    </select>
+
+    <button onclick="goToPage()">Vai</button>
+
+    <script>
+        function goToPage() {
+            const select = document.getElementById("pageSelect");
+            const url = select.value;
+
+            if (url === "") {
+                alert("Seleziona una pagina prima.");
+                return;
+            }
+
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+</html>
