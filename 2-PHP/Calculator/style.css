@@ -1,0 +1,94 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #2c4c5a, #0e1e26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* CALCULATOR CARD */
+.calculator {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 35px 40px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* TITLE */
+.calculator h1 {
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* FORM LAYOUT */
+.calculator form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* INPUTS & SELECT */
+.calculator input,
+.calculator select {
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* FOCUS */
+.calculator input:focus,
+.calculator select:focus {
+    outline: 2px solid #00b4ff;
+}
+
+/* ROW: SELECT + BUTTON */
+.row {
+    display: flex;
+    gap: 12px;
+}
+
+/* SELECT WIDTH */
+.row select {
+    flex: 1;
+}
+
+/* BUTTON */
+.row button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00b4ff, #0066ff);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex-shrink: 0;
+}
+
+.row button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.5);
+}
+
+.row button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}

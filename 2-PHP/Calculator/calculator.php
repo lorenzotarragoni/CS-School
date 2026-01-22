@@ -1,24 +1,28 @@
 <?php
-    $num1 = $_POST['num1'];
-    $num2 = $_POST['num2'];
-    $operation = $_POST['operation'];
-    $result = 0;
+if (!isset($_POST['num1'], $_POST['num2'], $_POST['operation'])) {
+    exit('Invalid request');
+}
 
-    if ($operation == 'add') {
+$num1 = (float) $_POST['num1'];
+$num2 = (float) $_POST['num2'];
+$operation = $_POST['operation'];
+$result = 0;
+
+switch ($operation) {
+    case 'add':
         $result = $num1 + $num2;
-    } elseif ($operation == 'subtract') {
+        break;
+    case 'subtract':
         $result = $num1 - $num2;
-    } elseif ($operation == 'multiply') {
+        break;
+    case 'multiply':
         $result = $num1 * $num2;
-    } elseif ($operation == 'divide') {
-        if ($num2 != 0) {
-            $result = $num1 / $num2;
-        } else {
-            $result = 'Error: Division by zero';
-        }
-    } else {
+        break;
+    case 'divide':
+        $result = $num2 != 0 ? $num1 / $num2 : 'Error: Division by zero';
+        break;
+    default:
         $result = 'Error: Invalid operation';
-    }
+}
 
-    echo 'Result: ' . $result;
-?>
+echo '<div class="result">Result: ' . $result . '</div>';
