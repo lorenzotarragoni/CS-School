@@ -10,11 +10,17 @@
     $filter = $_POST['filter1'];
 
     switch( $filter ) {
-        case "ascending":
+        case "nascending":
             $sql = "SELECT nome, cognome FROM studenti ORDER BY nome ASC";
             break;
-        case "descending":
+        case "ndescending":
             $sql = "SELECT nome, cognome FROM studenti ORDER BY nome DESC";
+            break;
+        case "sascending":
+            $sql = "SELECT nome, cognome FROM studenti ORDER BY cognome ASC";
+            break;
+        case "sdescending":
+            $sql = "SELECT nome, cognome FROM studenti ORDER BY cognome DESC";
             break;
         case "hvote":
             $sql = "SELECT s.nome, s.cognome, v.voto FROM studenti s, valutazioni v WHERE s.matricola = v.idStudente ORDER BY v.voto DESC";
@@ -22,12 +28,15 @@
         case "lvote":
             $sql = "SELECT s.nome, s.cognome, v.voto FROM studenti s, valutazioni v WHERE s.matricola = v.idStudente ORDER BY v.voto ASC";
             break;
+        case "passed":
+            $sql = "SELECT s.nome, s.cognome, v.voto FROM studenti s, valutazioni v WHERE s.matricola = v.idStudente AND v.voto >= 6";
+            break;
         default:
             die("Filtro non valido.");
     }
     $result = $conn->query($sql);
 
-    if($filter == "hvote" || $filter == "lvote") {
+    if($filter == "hvote" || $filter == "lvote" || $filter == "passed") {
         if($result->num_rows > 0) {
             echo "<table border='1'>
                     <tr>

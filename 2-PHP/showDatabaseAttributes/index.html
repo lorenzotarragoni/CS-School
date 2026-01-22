@@ -12,10 +12,13 @@
     <form method ="POST" action="filter.php">
         <label for ="filter1">Filter the the students by:</label>
         <select name="filter1" id="filter1">
-            <option name="ascending" value="ascending">A-Z</option>
-            <option name="descending" value="descending">Z-A</option>
+            <option name="nascending" value="nascending">name A-Z</option>
+            <option name="ndescending" value="ndescending">name Z-A</option>
+            <option name="sascending" value="sascending">surname A-Z</option>
+            <option name="sdescending" value="sdescending">surname Z-A</option>
             <option name="hvote" value="hvote">Highest Vote</option>
             <option name="lvote" value="lvote">Lowest Vote</option>
+            <option name="passed" value="passed">Sufficient</option>
         </select>
         <button type="submit">Apply Filter</button>
     </form>
