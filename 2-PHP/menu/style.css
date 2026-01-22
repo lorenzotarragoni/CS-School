@@ -1,73 +1,65 @@
-/* Reset base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
-/* Background */
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background: radial-gradient(circle at top, #2c4c5a, #0e1e26);
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
 }
 
-/* Contenitore */
-body > * {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 30px 40px;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+.container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
 }
 
-/* Label */
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    font-weight: 500;
+/* TITOLO */
+h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* Select */
+/* SELECT */
 select {
     width: 100%;
-    padding: 10px 14px;
-    font-size: 1rem;
-    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 1.1rem;
+    border-radius: 10px;
     border: none;
     outline: none;
-    margin-bottom: 20px;
-    background: #ffffff;
-    color: #333;
     cursor: pointer;
 }
 
-/* Bottone */
+/* BOTTONE */
 button {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
+    padding: 14px 60px;
+    font-size: 1.1rem;
     font-weight: 600;
     border: none;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: #fff;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #00b4ff, #0066ff);
+    color: white;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover bottone */
 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 114, 255, 0.5);
+    box-shadow: 0 12px 25px rgba(0, 102, 255, 0.5);
 }
 
-/* Active bottone */
 button:active {
     transform: translateY(0);
     box-shadow: none;
