@@ -10,10 +10,12 @@
 </head>
 <body>
     <form method ="POST" action="filter.php">
-        <label for ="filter1">Filter the the surname of the students by:</label>
+        <label for ="filter1">Filter the the students by:</label>
         <select name="filter1" id="filter1">
             <option name="ascending" value="ascending">A-Z</option>
             <option name="descending" value="descending">Z-A</option>
+            <option name="hvote" value="hvote">Highest Vote</option>
+            <option name="lvote" value="lvote">Lowest Vote</option>
         </select>
         <button type="submit">Apply Filter</button>
     </form>

@@ -16,10 +16,36 @@
         case "descending":
             $sql = "SELECT nome, cognome FROM studenti ORDER BY nome DESC";
             break;
+        case "hvote":
+            $sql = "SELECT s.nome, s.cognome, v.voto FROM studenti s, valutazioni v WHERE s.matricola = v.idStudente ORDER BY v.voto DESC";
+            break;
+        case "lvote":
+            $sql = "SELECT s.nome, s.cognome, v.voto FROM studenti s, valutazioni v WHERE s.matricola = v.idStudente ORDER BY v.voto ASC";
+            break;
         default:
             die("Filtro non valido.");
     }
     $result = $conn->query($sql);
+
+    if($filter == "hvote" || $filter == "lvote") {
+        if($result->num_rows > 0) {
+            echo "<table border='1'>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cognome</th>
+                        <th>Voto</th>
+                    </tr>";
+        }
+
+        while($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>" . $row['nome'] . "</td>
+                    <td>" . $row['cognome'] . "</td>
+                    <td>" . $row['voto'] . "</td>
+                  </tr>";
+        }
+        exit();
+    }
 
     if($result->num_rows > 0) {
         echo "<table border='1'>
