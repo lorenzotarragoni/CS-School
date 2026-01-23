@@ -10,7 +10,7 @@ $surname = $_POST['surname'];
 $dob = $_POST['dob'];
 $nationality = $_POST['nationality'];
 
-$sql = "INSERT INTO studenti (nome, cognome, dataNascita, nazionalita) VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO studenti (nome, cognome, data_nascita, nazionalita) VALUES (?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
 
 if (!$stmt) {
