@@ -5,17 +5,19 @@
             <STELLA NOME_STELLA = "Sole" TIPO_STELLA = "G2V">
             </STELLA>
             <PIANETA NOME_PIANETA ="Mercurio" RAGGIO_PIANETA ="57.9 milioni di km">
-                <LUNA>Luna</LUNA>
-                <COMETA>K12</COMETA>
-                <ASTEROIDE>Ceres</ASTEROIDE>
+                <LUNA>Luna</LUNA>   
             </PIANETA>
+            <COMETA>K12</COMETA>
+            <ASTEROIDE>Ceres</ASTEROIDE>
             <PIANET NOME_PIANETAA ="Venere" RAGGIO_PIANETA ="108.2 milioni di km">
                 <LUNA>Luna</LUNA>
-                <COMETA>D45</COMETA>
-                <ASTEROIDE>Pallas</ASTEROIDE>
-            </PIANETA>
+                </PIANETA>
+            <COMETA>D45</COMETA>
+            <ASTEROIDE>Pallas</ASTEROIDE>
             <PIANETA NOME_PIANETA ="Terra" RAGGIO_PIANETA ="149.6 milioni di km">
                 <LUNA>Luna</LUNA>
-                <COMETA>F67</COMETA>
-                <ASTEROIDE>Vesta</ASTEROIDE>
-        </SISTEMA_PLANETARIO>
+            </PIANETA>
+            <COMETA>F67</COMETA>
+            <ASTEROIDE>Vesta</ASTEROIDE>
+                </SISTEMA_PLANETARIO>
+            
