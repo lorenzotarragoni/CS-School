@@ -9,8 +9,14 @@
     <title>Document</title>
 </head>
 <body>
+    <form method ="POST" action="search.php">
+        <label for ="search1">Search a student by surname:</label>
+        <input type="text" id="search1" name="search1" value="Enter surname">
+        <button type="submit">Search</button>
+    </form>
+
     <form method ="POST" action="filter.php">
-        <label for ="filter1">Filter the the students by:</label>
+        <label for ="filter1">Other filtering options:</label>
         <select name="filter1" id="filter1">
             <option name="nascending" value="nascending">name A-Z</option>
             <option name="ndescending" value="ndescending">name Z-A</option>
