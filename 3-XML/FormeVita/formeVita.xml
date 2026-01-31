@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE FORME_DI_VITA SYSTEM "formeVita.dtd">
+    <FORME_DI_VITA>
+        <ANIMALE NOME="Leone">
+            <CORDATO DIMENSIONE="Grande">
+            </CORDATO>
+        </ANIMALE>
+        <VEGETALE DIMENSIONE="Media">
+        </VEGETALE>
+        <FUNGO DIMENSIONE="Piccola">
+        </FUNGO>
+        <BATTERIO DIMENSIONE="Microscopica">
+        </BATTERIO>
+        <VIRUS DIMENSIONE="Nanometrica">
+        </VIRUS>
+    </FORME_DI_VITA>
+        

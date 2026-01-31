@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE EUROPA SYSTEM "squadreCalcio.dtd">
+    <EUROPA>
+        <CAMPIONATO NOME = "Premier League" PAESE = "Inghilterra">
+            <SQUADRA NOME = "Manchester United">
+                <GIOCATORE>Cristiano Ronaldo</GIOCATORE>
+                <GIOCATORE>Nico Pazza</GIOCATORE>
+                <NUMERO_GIOCATORI>2</NUMERO_GIOCATORI>
+            </SQUADRA>
+            <SQUADRA NOME = "Liverpool">
+                <GIOCATORE>Mohamed Salah</GIOCATORE>
+                <GIOCATORE>Virgil van Dijk</GIOCATORE>
+                <GIOCATORE>Sadio Mané</GIOCATORE>
+                <GIOCATORE>Alisson Becker</GIOCATORE>
+                <GIOCATORE>Jordan Henderson</GIOCATORE>
+                <NUMERO_GIOCATORI>12</NUMERO_GIOCATORI>
+            </SQUADRA>
+ 

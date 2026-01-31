@@ -23,13 +23,13 @@
             $sql = "SELECT nome, cognome FROM studenti ORDER BY cognome DESC";
             break;
         case "hvote":
-            $sql = "SELECT s.nome, s.cognome, v.voto FROM studenti s, valutazioni v WHERE s.matricola = v.idStudente ORDER BY v.voto DESC";
+            $sql = "SELECT s.nome, s.cognome, v.voto FROM studenti s, valutazioni v WHERE s.matricola = v.id_studente ORDER BY v.voto DESC";
             break;
         case "lvote":
-            $sql = "SELECT s.nome, s.cognome, v.voto FROM studenti s, valutazioni v WHERE s.matricola = v.idStudente ORDER BY v.voto ASC";
+            $sql = "SELECT s.nome, s.cognome, v.voto FROM studenti s, valutazioni v WHERE s.matricola = v.id_studente ORDER BY v.voto ASC";
             break;
         case "passed":
-            $sql = "SELECT s.nome, s.cognome, v.voto FROM studenti s, valutazioni v WHERE s.matricola = v.idStudente AND v.voto >= 6";
+            $sql = "SELECT s.nome, s.cognome, v.voto FROM studenti s, valutazioni v WHERE s.matricola = v.id_studente AND v.voto >= 6";
             break;
         default:
             die("Filtro non valido.");
