@@ -1,66 +1,99 @@
-* {
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+html {
+    font-size: 16px;
 }
 
 body {
     min-height: 100vh;
-    background: radial-gradient(circle at top, #2c4c5a, #0e1e26);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: radial-gradient(1200px circle at top, #355f73 0%, #0b1a22 70%);
+    display: grid;
+    place-items: center;
+    color: #e6f1f5;
 }
 
 .container {
-    width: 100%;
-    max-width: 600px;
+    width: min(90%, 520px);
+    padding: 40px 35px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.35),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 25px;
+    gap: 28px;
 }
 
-/* TITOLO */
 h1 {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     font-weight: 700;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    text-align: center;
+    color: #ffffff;
 }
 
-/* SELECT */
 select {
     width: 100%;
-    padding: 14px 18px;
-    font-size: 1.1rem;
-    border-radius: 10px;
+    padding: 16px 18px;
+    font-size: 1rem;
+    border-radius: 12px;
     border: none;
     outline: none;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
     cursor: pointer;
+
+    transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* BOTTONE */
+select:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+select:focus {
+    box-shadow: 0 0 0 2px rgba(0, 180, 255, 0.6);
+}
+
 button {
-    padding: 14px 60px;
-    font-size: 1.1rem;
+    align-self: center;
+    padding: 15px 64px;
+    font-size: 1.05rem;
     font-weight: 600;
+    letter-spacing: 0.04em;
+
     border: none;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #00b4ff, #0066ff);
-    color: white;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #ffffff;
+
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 12px 30px rgba(0, 114, 255, 0.45);
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        filter 0.18s ease;
 }
 
 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(0, 102, 255, 0.5);
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+    box-shadow: 0 18px 45px rgba(0, 114, 255, 0.6);
 }
 
 button:active {
     transform: translateY(0);
-    box-shadow: none;
+    box-shadow: 0 8px 20px rgba(0, 114, 255, 0.4);
 }
