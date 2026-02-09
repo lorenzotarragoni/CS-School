@@ -1,8 +1,4 @@
 <?php
-if (!isset($_POST['num1'], $_POST['num2'], $_POST['operation'])) {
-    exit('Invalid request');
-}
-
 $num1 = (float) $_POST['num1'];
 $num2 = (float) $_POST['num2'];
 $operation = $_POST['operation'];
