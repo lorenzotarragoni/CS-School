@@ -1,18 +1,24 @@
-<!-- this file is used to recall the connection to the database, so we don't have to write the connection code in every file that needs to access the database -->
+<!-- 
+    Esempio di form che ricorda i dati inseriti
+    Se l'utente ha già inserito i dati, questi vengono visualizzati
+    altrimenti viene visualizzato il form per l'inserimento dei dati
+-->
 
 <?php
-
-
     if (isset($_POST['s']))
-        {
-            echo "Nome:          " . $_POST['nome'] . "<br>";
-            echo "E-mail:     " . $_POST['email'] . "<br>";
-        }
+    {
+        echo "Nome: " . $_POST['username'] . "<BR>";
+        echo "Casella di posta: " . $_POST['email'] . "<BR>";
+    }
     else
-        {
-            echo "FORM ACTION=" .$_SERVER['PHP_SELF'] . " METHOD=POST>";
-            echo "Nome: <input type='text' name='nome'><br>
-            E-mail: <input type='text' name='email'><br>;
-            </table>";
-        }
+    {
+        echo "<FORM ACTION='" . $_SERVER['PHP_SELF'] . "' METHOD='POST'>";
+        echo "<TABLE><TR><TD>Nome utente:</TD>";
+        echo "<TD><INPUT TYPE='text' NAME='username'></TD></TR>";
+        echo "<TR><TD>Email:</TD>";
+        echo "<TD><INPUT TYPE='text' NAME='email'></TD></TR>";
+        echo "</TABLE>";
+        echo "<INPUT TYPE='submit' NAME='s' VALUE='invia'>";
+        echo "</FORM>";
+    }
 ?>
